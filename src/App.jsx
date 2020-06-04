@@ -34,7 +34,7 @@ const App = () => {
                         <Admin />
                     </Route>
                     <Route path="/" exact>
-                        Ruta de inicio
+                        
                     </Route>
                 </Switch>
             </div>

@@ -66,7 +66,7 @@ const Firestore = (props) => {
     const eliminar = async (id) => {
       try {
         
-        await db.collection(props.user.uid).doc(id).delete()
+        await db.collection('hobbies').doc(id).delete()
   
         const arrayFiltrado = hobbies.filter(item => item.id !== id)
         setHobbies(arrayFiltrado)
@@ -90,7 +90,7 @@ const Firestore = (props) => {
       }
       try {
         
-        await db.collection(props.user.uid).doc(id).update({
+        await db.collection('hobbies').doc(id).update({
           nombre: hobbie
         })
         const arrayEditado = hobbies.map(item => (
