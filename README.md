@@ -1,3 +1,7 @@
+### Clone Project
+```
+git clone https://github.com/luiggislv/test-app-hb.git
+```
 ### Install node modules
 ```
 npm install
