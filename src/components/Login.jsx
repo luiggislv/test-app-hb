@@ -69,9 +69,7 @@ const Login = (props) => {
                 email: res.user.email,
                 uid: res.user.uid
             })
-            await db.collection(res.user.uid).add({
-                nombre: 'Hobbie 1'
-            })
+
             setEmail('')
             setPass('')
             setError(null)
