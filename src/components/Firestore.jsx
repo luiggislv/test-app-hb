@@ -44,9 +44,10 @@ const Firestore = (props) => {
       try {
   
         const nuevoHobbie = {
-          name: hobbie
+          nombre: hobbie
         }
-        const data = await db.collection(props.user.uid).add(nuevoHobbie)
+        /*const data = await db.collection(props.user.uid).add(nuevoHobbie)*/
+        const data = await db.collection('hobbies').add(nuevoHobbie)
   
         setHobbies([
           ...hobbies,
@@ -90,10 +91,10 @@ const Firestore = (props) => {
       try {
         
         await db.collection(props.user.uid).doc(id).update({
-          name: hobbie
+          nombre: hobbie
         })
         const arrayEditado = hobbies.map(item => (
-          item.id === id ? {id: item.id, name: hobbie} : item
+          item.id === id ? {id: item.id, nombre: hobbie} : item
         ))
         setHobbies(arrayEditado)
         setModoEdicion(false)
